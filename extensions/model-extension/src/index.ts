@@ -87,6 +87,7 @@ export default class JanModelExtension extends ModelExtension {
      * should compare and try import
      */
     let currentModels: Model[] = []
+
     try {
       if (!localStorage.getItem(ExtensionEnum.downloadedModels)) {
         // Updated from an older version than 0.5.5
