@@ -206,6 +206,13 @@ jobs:
         run: |
           make test
 
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: electron/playwright-report/
+          retention-days: 2
+
   coverage-check:
     runs-on: ubuntu-latest
     needs: base_branch_cov
