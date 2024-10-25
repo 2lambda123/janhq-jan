@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
+import { extractInferenceParams, extractModelLoadParams } from '@janhq/core'
 import { Accordion, AccordionItem } from '@janhq/joi'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { AlertTriangleIcon, InfoIcon } from 'lucide-react'
@@ -13,11 +14,6 @@ import RightPanelContainer from '@/containers/RightPanelContainer'
 import { loadModelErrorAtom } from '@/hooks/useActiveModel'
 
 import { getConfigurationsData } from '@/utils/componentSettings'
-
-import {
-  extractInferenceParams,
-  extractModelLoadParams,
-} from '@/utils/modelParam'
 
 import { serverEnabledAtom } from '@/helpers/atoms/LocalServer.atom'
 import { selectedModelAtom } from '@/helpers/atoms/Model.atom'
